@@ -3,7 +3,8 @@ package jeu;
 public class App {
 
     public static void main(String[] args) {
-        // TODO must be implemented
+        Scenario scenario = new Scenario();
+        System.out.println(scenario);
     }
 
 }

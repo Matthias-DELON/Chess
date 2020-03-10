@@ -1,7 +1,7 @@
 package plateau;
 
 import jeu.Couleur;
-import pieces.Piece;
+import pieces.*;
 
 import java.util.Arrays;
 
@@ -13,6 +13,7 @@ public class Echiquier {
     // Constructeurs
 
     public Echiquier() {
+        // Echiquier vide
         this.cases = new Case[8][8];
         boolean blanche = true;
         for (int i = 0; i < this.cases.length; i++) {
@@ -27,6 +28,9 @@ public class Echiquier {
                 }
             }
         }
+
+        // Positionnement des pièces;
+
     }
 
 
@@ -46,21 +50,21 @@ public class Echiquier {
 
     @Override
     public String toString() {
-        /*    a b c d e f g h
-         *   +---------------
-         *  8|B N B N B N B N
-         *  7|N B N B N B N B
-         *  6|B N B N B N B N
-         *  5|N B N B N B N B
-         *  4|B N B N B N B N
-         *  3|N B N B N B N B
-         *  2|B N B N B N B N
-         *  1|N B N B N B N B
+        /*    a  b  c  d  e  f  g  h
+         *   +-----------------------
+         *  8|B_ N_ B_ N_ B_ N_ B_ N_
+         *  7|N_ B_ N_ B_ N_ B_ N_ B_
+         *  6|B_ N_ B_ N_ B_ N_ B_ N_
+         *  5|N_ B_ N_ B_ N_ B_ N_ B_
+         *  4|B_ N_ B_ N_ B_ N_ B_ N_
+         *  3|N_ B_ N_ B_ N_ B_ N_ B_
+         *  2|B_ N_ B_ N_ B_ N_ B_ N_
+         *  1|N_ B_ N_ B_ N_ B_ N_ B_
          */
         String res = "";
-        String ligne = "  a b c d e f g h\n";
+        String ligne = "  a  b  c  d  e  f  g  h \n";
         res += ligne;
-        ligne = " +---------------\n";
+        ligne = " +-----------------------\n";
         res += ligne;
         for (int i = 0; i < this.cases.length; i++) {
             ligne = (8-i) + "|";
@@ -70,6 +74,8 @@ public class Echiquier {
             ligne = ligne.substring(0, ligne.length()-1) + "\n";
             res += ligne;
         }
+        ligne = " +-----------------------\n";
+        res += ligne;
         return res;
     }
 }

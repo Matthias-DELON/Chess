@@ -36,7 +36,7 @@ public class Case {
     @Override
     public String toString() {
         if(this.isEmpty()){
-            return this.couleur.toString();
+            return this.couleur.toString() + "_";
         }else{
             return this.piece.toString();
         }

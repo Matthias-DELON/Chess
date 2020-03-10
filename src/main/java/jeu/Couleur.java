@@ -1,7 +1,9 @@
+package jeu;
+
 public enum Couleur {
 
-    Noir ("Noir"),
-    Blanc ("Blanc");
+    Noir ("N"),
+    Blanc ("B");
 
     private String name = "";
 

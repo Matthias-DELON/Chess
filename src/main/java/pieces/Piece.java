@@ -15,11 +15,7 @@ public abstract class Piece {
 
     public Piece(Couleur couleur, char letter){
         this.couleur = couleur;
-        if(this.couleur.equals(Couleur.Blanc)){
-            this.letter = Character.toUpperCase(letter);
-        }else {
-            this.letter = Character.toLowerCase(letter);
-        }
+        this.letter = Character.toUpperCase(letter);
     }
 
     public Piece(Piece piece){

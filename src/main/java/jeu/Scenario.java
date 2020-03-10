@@ -4,13 +4,15 @@ import plateau.Echiquier;
 
 public class Scenario {
 
+    private Player[] players;
     private Echiquier echiquier;
 
 
     // Constructeurs
 
-    public Scenario(){
-        this.echiquier = new Echiquier();
+    public Scenario(Player[] players) {
+        this.players = players;
+        this.echiquier = new Echiquier(this.players[0], this.players[1]);
     }
 
 
@@ -29,6 +31,9 @@ public class Scenario {
 
     @Override
     public String toString() {
-        return this.echiquier.toString();
+        String res = this.players[0] + "\n";
+        res += this.players[1] + "\n";
+        res += this.echiquier.toString();
+        return res;
     }
 }
